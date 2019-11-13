@@ -1,0 +1,15 @@
+<input [(ngModel)]="searchText" placeholder="search text goes here">
+
+<table>
+  <tr>
+    <td>Full Name</td>
+    <td>Address</td>
+    <td>Interests</td>
+  </tr>
+  <tr *ngFor="let data of users | filter : searchText">
+    <td>{{data.full_name}}</td>
+    <td>{{data.address}}</td>
+    <td>{{data.interests}}</td>
+  </tr>
+</table>
+<router-outlet></router-outlet>
